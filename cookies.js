@@ -7,10 +7,10 @@ var page = webPage.create();
 * parse arguments
 */
 
-if (system.args.length != 7) {
+if (system.args.length != 6) {
 	console.log('Bad arguments.')
 	console.log('Arguments: script targetUrl action subaction firstDomain thirdDomain')
-	phantom.exit();
+	phantom.exit(1);
 }
 
 var targetUrl = 'http://publisher.localhost/publisher.html';
@@ -36,9 +36,6 @@ if (system.args.length > 4)
 if (system.args.length > 5)
 	thirdDomain = system.args[5];
 
-var assertScript = null;
-if (system.args.length > 6)
-	assertScript = system.args[6];
 
 // prepare environment
 phantom.cookiesEnabled=true;
@@ -55,7 +52,7 @@ page.open(targetUrl, function (status) {
   //}
 
 	var wasSuccessful = phantom.injectJs('process-cookies.js');
-	var wasSuccessful = phantom.injectJs(assertScript);
+	var wasSuccessful = phantom.injectJs('assert.js');
 	var wasSuccessful = phantom.injectJs('print-result.js');
 
 	phantom.exit();

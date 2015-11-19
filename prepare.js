@@ -3,22 +3,27 @@ var actionMapping = {
 		'all_is_empty': {
 			'first': '',
 			'third': '',
+			'expected': 'equal',
 		},
 		'cookie_third_is_empty': {
 			'first': 'ls=1447859209770|v=1|di=1447859209.5be2fe18-5554-4378-42d2-7488f6ed93e1',
 			'third': '',
+			'expected': 'equal',
 		},
 		'cookie_first_is_empty': {
 			'first': '',
 			'third': 'ls%3D1447859209000%7Cv%3D1%7Cdi%3D1447859209.5be2fe18-5554-4378-42d2-7488f6ed93e1',
+			'expected': 'equal',
 		},
 		'cookies_contain_same_device_ids': {
 			'first': 'ls=1447859209770|v=1|di=1447859209.5be2fe18-5554-4378-42d2-7488f6ed93e1',
 			'third': 'ls%3D1447859209000%7Cv%3D1%7Cdi%3D1447859209.5be2fe18-5554-4378-42d2-7488f6ed93e1',
+			'expected': 'equal',
 		},
 		'cookies_contain_different_device_ids': {
 			'first': 'ls=1447859209770|v=1|di=1447859209.5be2fe18-5554-4378-42d2-7488f6ed93e1',
 			'third': 'ls%3D1447859209000%7Cv%3D1%7Cdi%3D1447859209.69696969-6969-6969-6969-696969696969',
+			'expected': 'cookie_third_in_cookie_first',
 		},
 	},
 	'user_accepts_only_first': {
