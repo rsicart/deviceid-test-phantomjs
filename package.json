@@ -1,0 +1,16 @@
+{
+  "name": "deviceid-test-phantomjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run.js",
+  "dependencies": {},
+  "devDependencies": {
+    "phantomjs": "^1.9.18",
+    "slimerjs": "^0.9.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "R. Sicart",
+  "license": "ISC"
+}

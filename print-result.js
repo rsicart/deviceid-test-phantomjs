@@ -9,4 +9,3 @@ for (var i in cookies) {
     	console.log(cookies[i].domain + ':: ' + cookies[i].name + '=' + cookies[i].value);
 }
 */
-phantom.exit();
