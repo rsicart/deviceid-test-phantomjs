@@ -40,7 +40,7 @@ cat /dev/null > $COOKIES
 TARGET_URL=http://publisher.localhost/publisher.html
 ACTION="user_accepts_all"
 SUBACTION="cookies_contain_different_device_ids"
-ASSERT_SCRIPT="cookies_are_similar.js"
+ASSERT_SCRIPT="cookie_first_contains_cookie_third.js"
 phantomjs --cookies-file=$COOKIES $JS_SCRIPT "$TARGET_URL" "$ACTION" "$SUBACTION" "$FIRST_DOMAIN" "$THIRD_DOMAIN" "$ASSERT_SCRIPT"
 
 
